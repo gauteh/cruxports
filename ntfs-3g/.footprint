@@ -1,0 +1,51 @@
+drwxr-xr-x	root/root	bin/
+-rwxr-xr-x	root/root	bin/ntfs-3g
+drwxr-xr-x	root/root	lib/
+lrwxrwxrwx	root/root	lib/libntfs-3g.so -> libntfs-3g.so.54.0.0
+lrwxrwxrwx	root/root	lib/libntfs-3g.so.54 -> libntfs-3g.so.54.0.0
+-rw-r--r--	root/root	lib/libntfs-3g.so.54.0.0
+drwxr-xr-x	root/root	sbin/
+lrwxrwxrwx	root/root	sbin/mount.ntfs-3g -> /bin/ntfs-3g
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/ntfs-3g.probe
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/ntfs-3g/
+-rw-r--r--	root/root	usr/include/ntfs-3g/attrib.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/attrlist.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/bitmap.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/bootsect.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/collate.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/compat.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/compress.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/debug.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/device.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/device_io.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/dir.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/endians.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/index.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/inode.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/layout.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/lcnalloc.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/logfile.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/logging.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/mft.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/misc.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/mst.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/ntfstime.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/runlist.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/security.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/support.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/types.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/unistr.h
+-rw-r--r--	root/root	usr/include/ntfs-3g/volume.h
+drwxr-xr-x	root/root	usr/lib/
+-rwxr-xr-x	root/root	usr/lib/libntfs-3g.la
+lrwxrwxrwx	root/root	usr/lib/libntfs-3g.so -> /lib/libntfs-3g.so
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/libntfs-3g.pc
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man8/
+lrwxrwxrwx	root/root	usr/man/man8/mount.ntfs-3g.8.gz -> ntfs-3g.8.gz
+-rw-r--r--	root/root	usr/man/man8/ntfs-3g.8.gz
+-rw-r--r--	root/root	usr/man/man8/ntfs-3g.probe.8.gz
