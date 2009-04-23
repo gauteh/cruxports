@@ -28,7 +28,8 @@ build() {
         --enable-lastlog \
         --enable-xterm-colors-256 \
         --enable-codesets=all \
-        --enable-xim \
+        --disable-xim \
+        --enable-combining \
         --enable-afterimage \
         --enable-perl \
         --enable-iso14755
