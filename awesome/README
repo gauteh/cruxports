@@ -1,0 +1,15 @@
+README for awesome
+
+REQUIREMENTS
+
+    cairo with xcb support is required, install xorg/xorg-xcb-util
+and rebuild cairo
+
+prt-get depinst xorg-xcb-util
+prt-get update -fr -if cairo
+ 
+PRE-INSTALL
+
+POST-INSTALL
+
+PRECAUTION

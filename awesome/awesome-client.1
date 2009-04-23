@@ -1,0 +1,40 @@
+.\"     Title: awesome-client
+.\"    Author: 
+.\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
+.\"      Date: 04/20/2009
+.\"    Manual: 
+.\"    Source: 
+.\"
+.TH "AWESOME\-CLIENT" "1" "04/20/2009" "" ""
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+awesome-client - awesome window manager command line interface
+.SH "SYNOPSIS"
+awesome\-client
+.sp
+.SH "DESCRIPTION"
+awesome\-client is the command line interface to awesome\. It communicates with awesome via a socket located in the users\(cqs HOME directory\. It permits to execute Lua code remotely\.
+.sp
+.SH "USAGE"
+To determine which socket is to be used, it reads the DISPLAY environment variable\. awesome\-client reads commands from standard input\.
+.sp
+When you pipe multiple lines into awesome\-client, an empty line will flush already collected lines into awesome with an according immediate execution\.
+.sp
+.SH "SEE ALSO"
+awesome(1) awesomerc(5)
+.sp
+.SH "AUTHORS"
+Julien Danjou <\fIjulien@danjou\.info\fR\&[1]>
+.sp
+.SH "WWW"
+\fIhttp://awesome\.naquadah\.org\fR
+.sp
+.SH "NOTES"
+.IP " 1." 4
+julien@danjou.info
+.RS 4
+\%mailto:julien@danjou.info
+.RE

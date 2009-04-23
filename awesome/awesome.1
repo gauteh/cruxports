@@ -1,0 +1,309 @@
+.\"     Title: awesome
+.\"    Author: 
+.\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
+.\"      Date: 04/20/2009
+.\"    Manual: 
+.\"    Source: 
+.\"
+.TH "AWESOME" "1" "04/20/2009" "" ""
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+awesome - awesome window manager
+.SH "SYNOPSIS"
+\fBawesome\fR [\fB\-v\fR | \fB\-\-version\fR] [\fB\-h\fR | \fB\-\-help\fR] [\fB\-c\fR | \fB\-\-config\fR \fIFILE\fR] [\fB\-k\fR | \fB\-\-check\fR]
+.sp
+.SH "DESCRIPTION"
+\fBawesome\fR is a window manager for X\. It manages windows in different layouts, like floating or tiled\. Either layout can be applied dynamically, optimizing the environment for the application in use and the task performed\.
+.sp
+In tiled layout, windows are managed in a master and stacking area\. The master area contains the windows which currently need most attention, whereas the stacking area contains all other windows\. In floating layout windows can be resized and moved freely\. Dialog windows are always managed floating, regardless of the layout applied\. The spiral and dwindle layout are special cases of the tiled layout where the stacking area is arranged in a spiral for the former or as a rectangular fractal for the later\.
+.sp
+Windows are grouped by tags\. Each window can be tagged with one or multiple tags\. Selecting certain tags displays all windows with these tags\.
+.sp
+\fBawesome\fR can contain small wiboxes which can display anything you want: all available tags, the layout, the title of the visible windows, a text, etc\.
+.sp
+.SH "OPTIONS"
+.PP
+\fB\-v\fR, \fB\-\-version\fR
+.RS 4
+Print version information to standard output, then exit\.
+.RE
+.PP
+\fB\-h\fR, \fB\-\-help\fR
+.RS 4
+Print help information, then exit\.
+.RE
+.PP
+\fB\-c\fR, \fB\-\-config\fR \fIFILE\fR
+.RS 4
+Use an alternate configuration file instead of
+\fI$XDG_CONFIG_HOME/awesome/rc\.lua\fR\.
+.RE
+.PP
+\fB\-k\fR, \fB\-\-check\fR
+.RS 4
+Check configuration file syntax\.
+.RE
+.SH "DEFAULT MOUSE BINDINGS"
+.SS "Navigation"
+.PP
+\fBButton1\fR on tag name
+.RS 4
+View tag\.
+.RE
+.PP
+\fBButton4\fR, \fBButton5\fR on tag name
+.RS 4
+Switch to previous or next tag\.
+.RE
+.PP
+\fBButton4\fR, \fBButton5\fR on root window
+.RS 4
+Switch to previous or next tag\.
+.RE
+.PP
+\fBButton1\fR, \fBButton3\fR, \fBButton4\fR, \fBButton5\fR on layout symbol
+.RS 4
+Switch to previous or next layout\.
+.RE
+.SS "Layout modification"
+.PP
+\fBMod4 \e+ Button1\fR on tag name
+.RS 4
+Tag current client with this tag only\.
+.RE
+.PP
+\fBMod4 \e+ Button3\fR on tag name
+.RS 4
+Toggle this tag for client\.
+.RE
+.PP
+\fBButton3\fR on tag name
+.RS 4
+Add this tag to current view\.
+.RE
+.PP
+\fBMod4 \e+ Button1\fR on client window
+.RS 4
+Move window\.
+.RE
+.PP
+\fBMod4 \e+ Button3\fR on client window
+.RS 4
+Resize window\.
+.RE
+.SH "DEFAULT KEY BINDINGS"
+.SS "Window manager control"
+.PP
+\fBMod4 + Control \e+ r\fR
+.RS 4
+Restart
+\fBawesome\fR\.
+.RE
+.PP
+\fBMod4 + Shift \e+ q\fR
+.RS 4
+Quit
+\fBawesome\fR\.
+.RE
+.PP
+\fBMod4 \e+ F1\fR
+.RS 4
+Run prompt\.
+.RE
+.PP
+\fBMod4 \e+ F4\fR
+.RS 4
+Run Lua code prompt\.
+.RE
+.PP
+\fBMod4 \e+ Return\fR
+.RS 4
+Spawn terminal emulator\.
+.RE
+.SS "Clients"
+.PP
+\fBMod4 + Shift \e+ r\fR
+.RS 4
+Redraw the focused window\.
+.RE
+.PP
+\fBMod4 \e+ m\fR
+.RS 4
+Maximize client\.
+.RE
+.PP
+\fBMod4 \e+ f\fR
+.RS 4
+Set client fullscreen\.
+.RE
+.PP
+\fBMod4 + Shift \e+ c\fR
+.RS 4
+Kill focused client\.
+.RE
+.PP
+\fBMod4 \e+ t\fR
+.RS 4
+Mark a client\.
+.RE
+.SS "Navigation"
+.PP
+\fBMod4 \e+ j\fR
+.RS 4
+Focus next client\.
+.RE
+.PP
+\fBMod4 \e+ k\fR
+.RS 4
+Focus previous client\.
+.RE
+.PP
+\fBMod4 \e+ u\fR
+.RS 4
+Focus first urgent client\.
+.RE
+.PP
+\fBMod4 \e+ Left\fR
+.RS 4
+View previous tag\.
+.RE
+.PP
+\fBMod4 \e+ Right\fR
+.RS 4
+View next tag\.
+.RE
+.PP
+\fBMod4 \e+ 1\-9\fR
+.RS 4
+Switch to tag 1\-9\.
+.RE
+.PP
+\fBMod4 + Control \e+ j\fR
+.RS 4
+Focus next screen\.
+.RE
+.PP
+\fBMod4 + Control \e+ k\fR
+.RS 4
+Focus previous screen\.
+.RE
+.PP
+\fBMod4 \e+ Escape\fR
+.RS 4
+Focus previously selected tag set\.
+.RE
+.SS "Layout modification"
+.PP
+\fBMod4 + Shift \e+ j\fR
+.RS 4
+Switch client with next client\.
+.RE
+.PP
+\fBMod4 + Shift \e+ k\fR
+.RS 4
+Switch client with previous client\.
+.RE
+.PP
+\fBMod4 \e+ o\fR
+.RS 4
+Send client to next screen\.
+.RE
+.PP
+\fBMod4 \e+ h\fR
+.RS 4
+Decrease master width factor by 5%\.
+.RE
+.PP
+\fBMod4 \e+ l\fR
+.RS 4
+Increase master width factor by 5%\.
+.RE
+.PP
+\fBMod4 + Shift \e+ h\fR
+.RS 4
+Increase number of master windows by 1\.
+.RE
+.PP
+\fBMod4 + Shift \e+ l\fR
+.RS 4
+Decrease number of master windows by 1\.
+.RE
+.PP
+\fBMod4 + Control \e+ h\fR
+.RS 4
+Increase number of columns for non\-master windows by 1\.
+.RE
+.PP
+\fBMod4 + Control \e+ l\fR
+.RS 4
+Decrease number of columns for non\-master windows by 1\.
+.RE
+.PP
+\fBMod4 \e+ space\fR
+.RS 4
+Switch to next layout\.
+.RE
+.PP
+\fBMod4 + Shift \e+ space\fR
+.RS 4
+Switch to previous layout\.
+.RE
+.PP
+\fBMod4 + Control \e+ space\fR
+.RS 4
+Toggle client floating status\.
+.RE
+.PP
+\fBMod4 + Control \e+ Return\fR
+.RS 4
+Swap focused client with master\.
+.RE
+.PP
+\fBMod4 + Control \e+ 1\-9\fR
+.RS 4
+Toggle tag view\.
+.RE
+.PP
+\fBMod4 + Shift \e+ 1\-9\fR
+.RS 4
+Tag client with tag\.
+.RE
+.PP
+\fBMod4 + Shift + Control \e+ 1\-9\fR
+.RS 4
+Toggle tag on client\.
+.RE
+.PP
+\fBMod4 + Shift \e+ F1\-9\fR
+.RS 4
+Tag marked clients with tag\.
+.RE
+.SH "CUSTOMIZATION"
+\fBawesome\fR is customized by creating a custom \fI$XDG_CONFIG_HOME/awesome/rc\.lua\fR file\.
+.sp
+.SH "SIGNALS"
+\fBawesome\fR can be restarted by sending it a SIGHUP\.
+.sp
+.SH "SEE ALSO"
+\fBawesomerc\fR(5) \fBawesome\-client\fR(1)
+.sp
+.SH "BUGS"
+Of course there\(cqs no bug in \fBawesome\fR\. But there may be unexpected behaviors\.
+.sp
+Java applications which use the XToolkit/XAWT backend may draw gray windows only\. The XToolkit/XAWT backend breaks ICCCM\-compliance in recent JDK 1\.5 and early JDK 1\.6 versions because it assumes a reparenting window manager\. As a workaround you can use JDK 1\.4 (which doesn\(cqt contain the XToolkit/XAWT backend), or you can set the following environment variable (to use the older Motif backend instead): AWT_TOOLKIT=MToolkit
+.sp
+.SH "AUTHORS"
+Julien Danjou <\fIjulien@danjou\.info\fR\&[1]> and others\.
+.sp
+.SH "WWW"
+\fIhttp://awesome\.naquadah\.org\fR
+.sp
+.SH "NOTES"
+.IP " 1." 4
+julien@danjou.info
+.RS 4
+\%mailto:julien@danjou.info
+.RE

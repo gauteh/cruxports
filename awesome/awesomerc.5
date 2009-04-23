@@ -1,0 +1,58 @@
+.\"     Title: awesomerc
+.\"    Author: 
+.\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
+.\"      Date: 04/20/2009
+.\"    Manual: 
+.\"    Source: 
+.\"
+.TH "AWESOMERC" "5" "04/20/2009" "" ""
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+awesomerc - Configuration file for the awesome window manager
+.SH "SYNOPSIS"
+\fBawesome\fR looks for this configuration file in this order:
+.sp
+.sp
+.RS 4
+\h'-04'\(bu\h'+03'$XDG_CONFIG_HOME/awesome/rc\.lua
+.RE
+.sp
+.RS 4
+\h'-04'\(bu\h'+03'$HOME/\.config/awesome/rc\.lua
+.RE
+.sp
+.RS 4
+\h'-04'\(bu\h'+03'XDG_CONFIG_DIRS/awesome/rc\.lua
+.RE
+.SH "DESCRIPTION"
+The \fBrc\.lua\fR file contains configuration informations for \fBawesome\fR\. It can be used to configure the behaviour and look of awesome in a variety of ways\. It can be assimilated as a Lua program/script run at startup by \fBawesome\fR\. Therefore, it should use the awesome Lua API described in the API section\. This file is read at startup\.
+.sp
+.SH "AWESOME LUA API"
+Documentation for the Lua API can be found in the luadoc directory\.
+.sp
+.SH "COLORS FORMAT"
+Colors format in \fBawesome\fR are either standard X color names (blue, darkblue, lightred, etc) or hexadecimal formatted colors (#rrggbb or #rrggbbaa)\. By using hexadecimal format, you can also specifies an alpha channel: that means that #00ff00 will draw pure green, but #00ff00aa will set the alpha channel to \(oqaa\(cq and will blend the green with the color under it\.
+.sp
+.SH "TEXT FORMAT"
+You can use Pango markup in text string\. This allows to format the text rendered in widgets\. Pango markup documentation can be found in the Pango documentation at \fIhttp://library\.gnome\.org/devel/pango/stable/PangoMarkupFormat\.html\fR\.
+.sp
+A Pango markup example: <span weight="bold" foreground="#336699">\&...</span>\.
+.sp
+.SH "SEE ALSO"
+awesome(1) awesome\-client(1)
+.sp
+.SH "AUTHORS"
+Written by Julien Danjou <\fIjulien@danjou\.info\fR\&[1]>\.
+.sp
+.SH "WWW"
+\fIhttp://awesome\.naquadah\.org\fR
+.sp
+.SH "NOTES"
+.IP " 1." 4
+julien@danjou.info
+.RS 4
+\%mailto:julien@danjou.info
+.RE

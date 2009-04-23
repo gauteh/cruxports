@@ -1,0 +1,33 @@
+# Description: extremely fast, small, and dynamic window manager for X
+# URL:         http://awesome.naquadah.org/
+# Packager:    Gaute Hope <eg@gaute.vetsj.com>
+# Maintainer:  Bartlomiej Palmowski, rotwang at crux dot org dot pl
+# Depends on:  cmake gperf glib lua cairo pango imlib2 libev dbus
+
+name=awesome
+version=3.2.1
+release=1
+source=(http://$name.naquadah.org/download/$name-$version.tar.bz2
+    $name-client.1 $name.1 awsetbg.1 ${name}rc.5 
+    00-link-with-iconv.patch)
+
+
+build() {
+    mkdir -p $PKG/usr/man/man{1,5}
+    cp $name{,-client}.1 awsetbg.1 $PKG/usr/man/man1
+    cp ${name}rc.5 $PKG/usr/man/man5
+    
+    cd $name-$version
+    patch -p1 < ../00-link-with-iconv.patch
+
+    cmake . -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DXDG_CONFIG_DIR=/usr/etc/xdg \
+        -DAWESOME_MAN_PATH=/usr/man \
+	-DCMAKE_C_FLAGS_RELEASE="-DNDEBUG" \
+	-DGENERATE_MANPAGES=OFF
+    make
+    make DESTDIR=$PKG install
+
+    rm -rf $PKG/usr/share/doc/
+}

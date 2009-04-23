@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pkg-config --exists cairo-xcb ||
+{
+    echo -e "\033[31m######################################################\033[0m"
+    echo -e "\033[31m#\033[0m \033[1mCairo must be built with xcb support!\033[0m              \033[31m#\033[0m"
+    echo -e "\033[31m#\033[0m \033[1mInstall xorg/xorg-xcb-util, and rebuild opt/cairo.\033[0m \033[31m#\033[0m"
+    echo -e "\033[31m######################################################\033[0m"
+    echo -e "\033[36;1mSleeping for 10 seconds before proceeding.\033[0m"
+    sleep 10
+    exit 1
+}
