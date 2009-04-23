@@ -1,0 +1,21 @@
+# Description: Provides support for languages encodings 
+# URL: http://www.gnu.org/software/libiconv/
+# Packager: Gaute Hope <eg@gaute.vetsj.com>
+# Depends on: 
+
+name=libiconv
+version=1.12
+release=1
+source=(http://ftp.gnu.org/pub/gnu/libiconv/$name-$version.tar.gz)
+
+build () {
+	cd $name-$version
+    ./configure --prefix=/usr \
+                --enable-nls \
+                --enable-extra-encodings
+
+    make CFLAGS="$CFLAGS"
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share/doc
+    chown -R root:root $PKG
+}

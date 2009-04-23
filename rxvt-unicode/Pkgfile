@@ -1,0 +1,40 @@
+# Description: rxvt with unicode, xft and 256 colors support, targeted at setups with nn_NO locale
+# URL: http://software.schmorp.de/#rxvt-unicode
+# Packager: Gaute Hope <eg@gaute.vetsj.com>
+# Depends on: xorg
+
+name=rxvt-unicode
+version=9.06
+release=1
+source=(http://dist.schmorp.de/rxvt-unicode/rxvt-unicode-$version.tar.bz2)
+
+build() {
+	cd rxvt-unicode-$version
+
+    patch -p1 < doc/urxvt-8.2-256color.patch
+
+	./configure --prefix=/usr \
+		--mandir=/usr/man \
+        --enable-everything \
+		--enable-utmp \
+		--enable-wtmp \
+		--enable-transparency \
+		--enable-mousewheel \
+		--enable-xft \
+		--enable-font-styles \
+        --enable-unicode3 \
+        --enable-selectionscrolling \
+        --enable-smart-resize \
+        --enable-lastlog \
+        --enable-xterm-colors-256 \
+        --enable-codesets=all \
+        --enable-xim \
+        --enable-afterimage \
+        --enable-perl \
+        --enable-iso14755
+
+	make
+
+	mkdir -p $PKG/usr/share/terminfo
+	make TERMINFO=$PKG/usr/share/terminfo DESTDIR=$PKG install
+}
