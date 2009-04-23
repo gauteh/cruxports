@@ -1,0 +1,47 @@
+# Description: Directory content manager
+# URL: http://www.kernel.org/pub/software/scm/git/docs
+# Packager: Gaute Hope <eg@gaute.vetsj.com> 
+# Depends on: curl libiconv
+# Nice to have: tk openssl expat
+
+name=git
+version=1.6.3.rc1
+release=1
+source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	# install Error.pm. this pretty much sucks, but i'm too lazy to
+	# investigate whether there's a better way.
+	#sed -i -e '15,16d' -e '18d' perl/Makefile.PL
+
+    ./configure --prefix=/usr \
+                --with-curl \
+                --with-iconv=/usr/lib \
+                --with-tcltk \
+                --with-expat \
+                --with-openssl \
+                --with-mandir=/usr/man
+
+	make CFLAGS="$CFLAGS" all 
+	make DESTDIR=$PKG install
+
+	cd $SRC
+
+	for i in man*; do
+		install -d $PKG/usr/man/$i
+		install -m 644 $i/* $PKG/usr/man/$i;
+	done
+
+	#install -d $PKG/usr/man/man3
+	#mv $PKG/usr/share/man/man3/{Git,private-Error}.3pm \
+		#$PKG/usr/man/man3/
+	#rmdir $PKG/usr/share/{man/man3,man}
+
+	#find $PKG -name perllocal.pod -delete
+	#find $PKG -name .packlist -delete
+
+	#rm -rf $PKG/usr/share/gitk/lib/msgs
+	#rmdir $PKG/usr/share/gitk/{lib,}
+}
