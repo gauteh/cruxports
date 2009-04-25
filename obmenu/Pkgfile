@@ -1,0 +1,17 @@
+# Description: A menu editor for Openbox
+# URL: http://ff-extractor.sourceforge.net/
+# Packager: Gaute Hope <eg@gaute.vetsj.com>
+# Depends on: python pygtk gnome-python
+
+name=obmenu
+version=1.0
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+
+build() {
+	cd obmenu-$version
+
+    python setup.py install --prefix=$PKG/usr
+    
+}
+
