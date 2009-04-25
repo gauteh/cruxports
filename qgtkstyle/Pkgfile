@@ -1,0 +1,19 @@
+# Description: QT style renderer for GTK; to make QT applications use the GTK theme
+# URL: http://labs.trolltech.com/page/Projects/Styles/GtkStyle 
+# Packager: Gaute Hope <eg@gaute.vetsj.com>
+# Depends on: qt gtk
+
+name=qgtkstyle
+version=svn
+release=1
+source=()
+
+build () {
+    svn co svn://labs.trolltech.com/svn/styles/gtkstyle
+    cd gtkstyle/
+
+    qmake
+    make
+
+    make INSTALL_ROOT=${PKG} install
+}
