@@ -1,0 +1,17 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/libdaap/
+-rw-r--r--	root/root	usr/include/libdaap/chunk-info.h
+-rw-r--r--	root/root	usr/include/libdaap/chunk.h
+-rw-r--r--	root/root	usr/include/libdaap/container-chunk.h
+-rw-r--r--	root/root	usr/include/libdaap/content-codes.h
+-rw-r--r--	root/root	usr/include/libdaap/integer-chunk.h
+-rw-r--r--	root/root	usr/include/libdaap/libdaap.h
+-rw-r--r--	root/root	usr/include/libdaap/string-chunk.h
+-rw-r--r--	root/root	usr/include/libdaap/version-chunk.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libdaap.a
+-rwxr-xr-x	root/root	usr/lib/libdaap.la
+lrwxrwxrwx	root/root	usr/lib/libdaap.so -> libdaap.so.0.0.3
+lrwxrwxrwx	root/root	usr/lib/libdaap.so.0 -> libdaap.so.0.0.3
+-rwxr-xr-x	root/root	usr/lib/libdaap.so.0.0.3

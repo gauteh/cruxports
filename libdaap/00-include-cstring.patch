@@ -1,0 +1,47 @@
+Reason: Missing includes for various string functions (strcmp, memcpy)
+Author: Gaute Hope <eg@gaute.vetsj.com>
+Upstream: Will report..
+diff -ru old/lib/container-chunk.cpp new/lib/container-chunk.cpp
+--- old/lib/container-chunk.cpp	2003-05-29 16:24:03.000000000 +0200
++++ new/lib/container-chunk.cpp	2009-04-25 22:58:36.000000000 +0200
+@@ -20,6 +20,7 @@
+  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+  */
+ 
++#include <cstring>
+ #include <libdaap/container-chunk.h>
+ #include "macros.h"
+ 
+diff -ru old/lib/content-codes.cpp new/lib/content-codes.cpp
+--- old/lib/content-codes.cpp	2003-05-29 16:40:14.000000000 +0200
++++ new/lib/content-codes.cpp	2009-04-25 22:58:19.000000000 +0200
+@@ -20,6 +20,7 @@
+  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+  */
+ 
++#include <cstring>
+ #include <libdaap/content-codes.h>
+ #include "macros.h"
+ #include <libdaap/chunk-info.h>
+diff -ru old/lib/integer-chunk.cpp new/lib/integer-chunk.cpp
+--- old/lib/integer-chunk.cpp	2003-05-29 16:24:04.000000000 +0200
++++ new/lib/integer-chunk.cpp	2009-04-25 22:57:20.000000000 +0200
+@@ -20,6 +20,7 @@
+  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+  */
+ 
++#include <cstring>
+ #include <libdaap/integer-chunk.h>
+ #include "macros.h"
+ 
+diff -ru old/lib/version-chunk.cpp new/lib/version-chunk.cpp
+--- old/lib/version-chunk.cpp	2003-05-29 16:24:04.000000000 +0200
++++ new/lib/version-chunk.cpp	2009-04-25 22:57:45.000000000 +0200
+@@ -23,6 +23,7 @@
+ #include <libdaap/version-chunk.h>
+ #include "macros.h"
+ #include <stdio.h>
++#include <cstring>
+ 
+ namespace DAAP {
+ 
