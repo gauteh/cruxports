@@ -1,0 +1,23 @@
+# Description: A background browser and setter for X windows.
+# URL: http://ff-extractor.sourceforge.net/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Gaute Hope <eg@gaute.vetsj.com>
+# Depends on: gtkmm
+
+name=nitrogen
+version=1.4
+release=1
+source=(http://projects.l3ib.org/nitrogen/files/nitrogen-$version.tar.gz)
+
+build() {
+	cd nitrogen-$version
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man
+
+	make CXXFLAGS="${CXXFLAGS} -DPNG_SKIP_SETJMP_CHECK"
+    make DESTDIR=$PKG install
+}
+
