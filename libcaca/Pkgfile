@@ -1,0 +1,27 @@
+# $Id: $
+# Description: Colour AsCii Art library
+# URL: http://sam.zoy.org/projects/libcaca/
+# Maintainer: Younes Hafri <ycrux@club-internet.fr>
+# Packager: Younes Hafri <ycrux@club-internet.fr>
+# Packager: Gaute Hope <eg@gaute.vetsj.com>
+# Depends on: x11, imlib2, libslang, ncurses
+
+name=libcaca
+version=0.99.beta16
+release=1
+source=(http://caca.zoy.org/files/$name/$name-$version.tar.gz)
+
+build () {
+	cd $name-$version
+	./configure --prefix=/usr \
+                --enable-slang \
+                --enable-ncurses \
+                --enable-imlib2 \
+                --enable-x11 \
+                --disable-doc
+        
+    make CFLAGS="$CFLAGS"
+	make DESTDIR=$PKG install
+
+    chown -R root:root $PKG
+}
