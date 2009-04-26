@@ -1,6 +1,6 @@
+# Based on port in opt
 # Description: Library of PNG support functions.
 # URL:         http://www.libpng.org
-# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
 # Depends on:  zlib
 # Packager:    Gaute Hope <eg@gaute.vetsj.com>
 

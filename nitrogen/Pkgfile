@@ -1,7 +1,5 @@
 # Description: A background browser and setter for X windows.
-# URL: http://ff-extractor.sourceforge.net/
-# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
-# Packager: Danny Rawlins, monster dot romster at gmail dot com
+# URL: http://projects.l3ib.org/nitrogen/
 # Packager: Gaute Hope <eg@gaute.vetsj.com>
 # Depends on: gtkmm
 

@@ -1,8 +1,6 @@
-# $Id: $
+# Based on Pkgbuild by yhafri
 # Description: Colour AsCii Art library
 # URL: http://sam.zoy.org/projects/libcaca/
-# Maintainer: Younes Hafri <ycrux@club-internet.fr>
-# Packager: Younes Hafri <ycrux@club-internet.fr>
 # Packager: Gaute Hope <eg@gaute.vetsj.com>
 # Depends on: x11, imlib2, libslang, ncurses
 

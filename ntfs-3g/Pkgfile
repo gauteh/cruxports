@@ -1,7 +1,6 @@
+# Based on port by romster
 # Description: Freely available NTFS driver with read and write support.
 # URL: http://www.ntfs-3g.org/
-# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
-# Packager: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Gaute Hope <eg@gaute.vetsj.com>
 
 name=ntfs-3g

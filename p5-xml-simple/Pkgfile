@@ -1,8 +1,7 @@
-# $Id: $
+# Based on port by yhafri
 # Description: Easy API to maintain XML
 # URL: http://search.cpan.org/~grantm/XML-Simple-2.12/
-# Maintainer: Younes Hafri <ycrux@club-internet.fr>
-# Packager: Younes Hafri <ycrux@club-internet.fr>
+# Packager: Gaute Hope <eg@gaute.vetsj.com>
 # Depends on: p5-xml-parser
 
 name=p5-xml-simple

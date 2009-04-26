@@ -1,8 +1,7 @@
-# $Id: $
+# Based on port by yhafri 
 # Description: The Digital Audio Access Protocol
 # URL: http://daap.sourceforge.net/
-# Maintainer: Younes Hafri <ycrux@club-internet.fr>
-# Packager: Younes Hafri <ycrux@club-internet.fr>
+# Packager: Gaute Hope <eg@gaute.vetsj.com>
 # Depends on:
 
 name=libdaap

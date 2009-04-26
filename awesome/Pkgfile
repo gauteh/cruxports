@@ -1,7 +1,7 @@
 # Description: extremely fast, small, and dynamic window manager for X
 # URL:         http://awesome.naquadah.org/
-# Packager:    Gaute Hope <eg@gaute.vetsj.com>
 # Maintainer:  Bartlomiej Palmowski, rotwang at crux dot org dot pl
+# Packager:    Gaute Hope <eg@gaute.vetsj.com>
 # Depends on:  cmake gperf glib lua cairo pango imlib2 libev dbus
 
 name=awesome

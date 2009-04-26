@@ -12,10 +12,6 @@ source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.
 build() {
 	cd $name-$version
 
-	# install Error.pm. this pretty much sucks, but i'm too lazy to
-	# investigate whether there's a better way.
-	#sed -i -e '15,16d' -e '18d' perl/Makefile.PL
-
     ./configure --prefix=/usr \
                 --with-curl \
                 --with-iconv=/usr/lib \
@@ -33,15 +29,4 @@ build() {
 		install -d $PKG/usr/man/$i
 		install -m 644 $i/* $PKG/usr/man/$i;
 	done
-
-	#install -d $PKG/usr/man/man3
-	#mv $PKG/usr/share/man/man3/{Git,private-Error}.3pm \
-		#$PKG/usr/man/man3/
-	#rmdir $PKG/usr/share/{man/man3,man}
-
-	#find $PKG -name perllocal.pod -delete
-	#find $PKG -name .packlist -delete
-
-	#rm -rf $PKG/usr/share/gitk/lib/msgs
-	#rmdir $PKG/usr/share/gitk/{lib,}
 }
