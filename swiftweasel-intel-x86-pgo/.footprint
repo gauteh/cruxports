@@ -195,7 +195,7 @@ drwxr-xr-x	root/root	usr/lib/swiftweasel/modules/
 -rwxr-xr-x	root/root	usr/lib/swiftweasel/mozilla-xremote-client
 -rw-r--r--	root/root	usr/lib/swiftweasel/old-homepage-default.properties
 -rw-r--r--	root/root	usr/lib/swiftweasel/platform.ini
-lrwxrwxrwx	root/root	usr/lib/swiftweasel/plugins -> /usr/lib/mozilla/plugins
+lrwxrwxrwx	root/root	usr/lib/swiftweasel/plugins -> /usr/lib/firefox/plugins
 -rwxr-xr-x	root/root	usr/lib/swiftweasel/removed-files
 drwxr-xr-x	root/root	usr/lib/swiftweasel/res/
 -rw-r--r--	root/root	usr/lib/swiftweasel/res/EditorOverride.css

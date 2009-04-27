@@ -18,6 +18,10 @@ build() {
       # fix erronous install.rdf
       chmod -R 755 $PKG/usr/lib/swiftweasel/extensions/*
 
+      # crux default is to install plugins by firefox
+      rm $PKG/usr/lib/swiftweasel/plugins
+      ln -s /usr/lib/firefox/plugins $PKG/usr/lib/swiftweasel/plugins
+
       mkdir -p $PKG/usr/bin
       ln -s /usr/lib/swiftweasel/swiftweasel $PKG/usr/bin/swiftweasel
 }
