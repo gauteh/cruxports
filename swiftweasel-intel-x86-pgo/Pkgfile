@@ -1,0 +1,23 @@
+# Description: An optimized version of firefox
+# URL: http://swiftweasel.tuxfamily.com
+# Packager: Gaute Hope <eg@gaute.vetsj.com>
+# Depends on:
+
+name=swiftweasel
+version=3.0.9
+release=1
+
+source=(http://downloads.sourceforge.net/swiftweasel/${name}-${version}_intel-pgo_x86-arch.tar.gz)
+			   
+build() {
+
+      mkdir -p $PKG/usr/lib/
+      
+      cp -r swiftweasel $PKG/usr/lib/
+
+      # fix erronous install.rdf
+      chmod -R 755 $PKG/usr/lib/swiftweasel/extensions/*
+
+      mkdir -p $PKG/usr/bin
+      ln -s /usr/lib/swiftweasel/swiftweasel $PKG/usr/bin/swiftweasel
+}
