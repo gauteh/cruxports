@@ -1,6 +1,8 @@
+# Version bump of port from opt
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Packager: Gaute Hope <eg@gaute.vetsj.com>
 # Depends on: xulrunner
 
 name=firefox
